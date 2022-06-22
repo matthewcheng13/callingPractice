@@ -1,5 +1,5 @@
 import requests
-
+requests.packages.urllib3.disable_warnings()
 
 _INFOBLOX_LAB_INFO = {
     'url': 'https://dc01dnslab.net.adp.com/wapi/v2.6.1',
