@@ -1,16 +1,18 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+import request
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+_INFOBLOX_LAB_INFO = {
+    'url': 'https://dc01dnslab.net.adp.com/wapi/v2.6.1',
+    'username': 'gnsauto',
+    'password': 'gnsauto01'
+}
+
+
+def call(view):
+    URL = f'{_INFOBLOX_LAB_INFO["url"]}/{view}'
 
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    print('PyCharm')
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
