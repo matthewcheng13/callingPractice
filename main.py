@@ -1,4 +1,4 @@
-import request
+import requests
 
 
 _INFOBLOX_LAB_INFO = {
@@ -10,10 +10,12 @@ _INFOBLOX_LAB_INFO = {
 
 def call(view):
     URL = f'{_INFOBLOX_LAB_INFO["url"]}/{view}'
+    auth = (_INFOBLOX_LAB_INFO['username'], _INFOBLOX_LAB_INFO['password'])
+    return requests.get(URL, auth=auth)
 
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print('PyCharm')
+    print(call('ipv4address?'))
 
 #overwrite
